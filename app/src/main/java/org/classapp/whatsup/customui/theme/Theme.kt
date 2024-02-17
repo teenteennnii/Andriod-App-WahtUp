@@ -1,4 +1,4 @@
-package com.example.compose
+package org.classapp.whatsup.customui.theme
 
 import android.app.Activity
 import android.os.Build

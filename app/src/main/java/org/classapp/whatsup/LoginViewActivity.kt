@@ -3,6 +3,7 @@ package org.classapp.whatsup
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -12,6 +13,10 @@ import androidx.cardview.widget.CardView
 class LoginViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val mapApiKey = BuildConfig.MAPS_API_KEY
+        Log.i("MAP_API_KEY", "MAP_API_KEY = " + mapApiKey)
+
         setContentView(R.layout.activity_login_view)
 
         val signInBtn:Button = findViewById(R.id.signInBtn)
@@ -39,6 +44,7 @@ class LoginViewActivity : AppCompatActivity() {
                 signInPanel.visibility = View.GONE
 
                 val i = Intent(this, MainActivity::class.java)
+                i.putExtra("LoginUsername", username)
                 startActivity(i)
             } else {
                 Toast.makeText(this, "Try Again!", Toast.LENGTH_LONG).show()

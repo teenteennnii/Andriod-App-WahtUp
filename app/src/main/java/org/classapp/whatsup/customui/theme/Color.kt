@@ -1,4 +1,4 @@
-package com.example.compose
+package org.classapp.whatsup.customui.theme
 import androidx.compose.ui.graphics.Color
 
 val primaryLight = Color(0xFF8C4A60)

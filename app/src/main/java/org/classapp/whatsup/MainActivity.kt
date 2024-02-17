@@ -26,6 +26,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import org.classapp.whatsup.customui.theme.AppTheme
 import org.classapp.whatsup.ui.theme.WhatsUpTheme
 
 
@@ -33,7 +34,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            WhatsUpTheme {
+            AppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -43,8 +44,9 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-
-        Toast.makeText(this, "Welcome to WhatUp!", Toast.LENGTH_LONG).show()
+        val i = intent
+        val username = i.getStringExtra("LoginUsername")
+        Toast.makeText(this, "Welcome $username to WhatUp!", Toast.LENGTH_LONG).show()
     }
 }
 

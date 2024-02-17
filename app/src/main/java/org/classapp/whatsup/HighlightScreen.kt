@@ -31,6 +31,7 @@ import com.google.firebase.firestore.QuerySnapshot
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.toObject
 import com.google.firebase.ktx.Firebase
+import org.classapp.whatsup.customui.theme.AppTheme
 import org.classapp.whatsup.ui.theme.WhatsUpTheme
 import java.text.SimpleDateFormat
 
@@ -73,7 +74,7 @@ fun HighlightScreen() {
     }
     getEventsFromFirebase(onFilebaseQuerySuccess, onFilebaseQueryFailed)
 
-    WhatsUpTheme {
+    AppTheme {
         Surface(
             modifier = Modifier
                 .fillMaxSize()

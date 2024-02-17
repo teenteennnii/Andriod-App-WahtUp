@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="org.classapp.whatsup" />
+                  <option name="mobileSdkAppId" value="1:248334480467:android:e731c5dfaab81d06d6c2a6" />
+                  <option name="projectId" value="whatup-414106" />
+                  <option name="projectNumber" value="248334480467" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
